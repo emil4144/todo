@@ -1,0 +1,29 @@
+.complete-container{
+    border:1px solid darkgray;
+    margin: 10px auto;
+    width:690px;
+    padding:5px;
+    position: relative;
+    top: 50px;
+    background-color:rgb(240, 240, 240);
+}
+.complete-header{
+    color:rgb(80,80,80);
+    margin:0;
+    padding:10px;
+    text-align: center;
+    border-bottom:2px solid darkgray;
+}
+.complete-list{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.complete-list li{
+    color:rgb(80,80,80);
+    font-size: 30px;
+    border: 1px solid darkgray;
+    margin:1px;
+    border-radius:5px;
+    padding:10px 20px;
+}

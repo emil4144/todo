@@ -1,0 +1,60 @@
+.main-container{
+    position: relative;
+    top: 50px;    
+}
+.add-task{
+    border:1px solid darkgray;
+    margin:10px auto;
+    width:500px;
+    padding:50px;
+    background-color:rgb(240, 240, 240);
+}
+.task-inp{
+    display: block;
+    margin:5px auto;
+    width:90%;
+    font-size: 20px;
+    padding: 5px 0;
+    border-radius:5px;
+    border:2px  solid darkgray;
+}
+.task-bttn{
+    color:rgb(80,80,80);
+    display: block;
+    margin:10px auto;
+    border-radius:5px;
+    padding:10px 20px;
+}
+.task-hdr{
+    color:rgb(80,80,80);
+    margin:auto;
+    display:block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.task-list{
+    border: 1px solid darkgray;
+    width:590px;
+   padding:10px 5px;
+    margin:0 auto;
+    background-color:rgb(240, 240, 240);
+}
+.task-list h1{
+    color:rgb(80,80,80);
+    padding:10px 50px 0 0;
+    border-bottom: 2px solid darkgray;
+    margin:0 auto;
+}
+.tasks{
+    list-style-type: none;
+    padding: 0;
+   margin: 0;
+}
+.tasks li{
+    color:rgb(80,80,80);
+    font-size: 30px;
+    border: 1px solid darkgray;
+    margin:1px;
+    border-radius:5px;
+    padding:5px 20px;
+}

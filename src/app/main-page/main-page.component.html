@@ -1,0 +1,14 @@
+<div class="main-container">
+  <form class="add-task" (submit)="CreateTask()" >
+    <h1 class="task-hdr">Create task</h1>
+    <input type="text"  class="task-inp" [(ngModel)]="task" name="task" placeholder="Write task" autocomplete="off" >
+    <input type="button" value="CREATE" class="task-bttn" (click)="CreateTask()" >
+  </form>
+  <div class="task-list">
+    <h1>Task list</h1>
+    <ul class="tasks">
+      <li *ngFor="let task of tasks">{{task.tsk}}</li>      
+      <li *ngIf="tasks==''" >No tasks yet</li>
+    </ul>
+  </div>
+</div>

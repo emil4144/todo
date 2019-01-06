@@ -1,0 +1,7 @@
+<div class="active-container">
+  <h1 class="active-header">Active tasks</h1>
+  <ul class="active-list">
+    <li *ngFor="let task of tasks" >{{task.tsk}}</li>
+    <li *ngIf="tasks==''" >No tasks yet</li>    
+  </ul>
+</div>

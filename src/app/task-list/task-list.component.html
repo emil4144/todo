@@ -1,0 +1,14 @@
+<div class="tasklist-container">
+    <h1 class="tasklist-header">What needs to be done?</h1>
+    <ul class="tasklist-list">
+        <li *ngFor="let task of tasks" NgHover="show">
+            <input type="checkbox"  class="check-done" [checked]="task.completed" (change)="tskComplete(task.id)">
+            <span [class.completed]="task.completed">{{task.tsk}}</span>
+            <span class="archive-btn" (click)="archiveTask(task.id, task.completed)">A</span>
+            <span class="delete-btn"  (click)="deleteTask(task.id, task.completed)">X</span>
+        </li>
+        <li *ngIf="tasks==''">No tasks yet</li>
+    </ul>
+    <div class="err-bar" [style.display]="vb">{{error}}</div>
+</div>
+

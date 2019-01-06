@@ -1,0 +1,77 @@
+.tasklist-container{
+    border:1px solid darkgray;
+    margin: 10px auto;
+    width:690px;
+    padding:5px;
+    position: relative;
+    top: 50px;
+    background-color:rgb(240, 240, 240);
+}
+.tasklist-header{
+    color:rgb(80,80,80);
+    margin:0;
+    padding:10px;
+    text-align: center;
+    border-bottom:2px solid darkgray;
+}
+.tasklist-list{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.tasklist-list li{
+    position: relative;
+    color:rgb(80,80,80);
+    font-size: 30px;
+    border: 1px solid darkgray;
+    margin:1px;
+    border-radius:5px;
+    padding:10px 20px;
+}
+.check-done{    
+    width:20px;
+    height:20px;
+    border:0;
+    outline: 0;    
+    border-radius:50%;
+}
+.completed{
+    text-decoration:line-through;
+}
+.delete-btn{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right:10px;
+    border:2px solid darkgray;
+    padding:5px;
+    top:2px;
+    border-radius:5px;  
+    display: none;
+}
+.archive-btn{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right:50px;
+    border:2px solid darkgray;
+    padding:5px;
+    top:2px;
+    border-radius:5px;
+    opacity: 0;    
+}
+.show .archive-btn,.show .delete-btn {
+    transition-duration: 5s;
+    transition-property: unset;
+    display:inline-block!important;
+    opacity: 1;
+}
+
+.err-bar{
+    width:688px;
+    margin:10px auto;
+    border:1px solid darkgray;
+    color:red;
+    text-align: center;
+    font-size: 50px;
+}

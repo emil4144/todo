@@ -1,0 +1,25 @@
+.navbar {
+    border:1px solid gray;
+    background-color:lightgray;
+    position: fixed;
+    width:100%;
+    top:0;    
+}
+.nav-items li{    
+    display:inline-block;
+    list-style-type: none;   
+}
+.nav-items li a{
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius:5px; 
+    color:black;
+}
+.nav-items li a:hover{
+    border: 1px solid darkgray;
+    background-color: azure;
+}
+.active{
+    border: 1px solid darkgray;
+    background-color: azure;
+}

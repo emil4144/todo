@@ -4,22 +4,28 @@
     position: fixed;
     width:100%;
     top:0;    
+    z-index:1
 }
 .nav-items li{    
     display:inline-block;
-    list-style-type: none;   
+    list-style-type: none;  
+    box-sizing: content-box;
+    
 }
 .nav-items li a{
     text-decoration: none;
     padding: 10px 25px;
     border-radius:5px; 
     color:black;
+    margin: 2px
 }
 .nav-items li a:hover{
     border: 1px solid darkgray;
     background-color: azure;
+    padding: 9px 24px;
 }
 .active{
     border: 1px solid darkgray;
     background-color: azure;
+    padding: 9px 24px !important;
 }

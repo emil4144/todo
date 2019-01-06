@@ -1,22 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import{Select,Store} from '@ngxs/store';
 import {TodoState}from '../state/todo.state';
 import { CompleteTask, UnCompleteTask,DeleteTask,ArchiveTask } from '../state/todo.actions';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'lw-task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent implements OnInit,OnDestroy {
   public tasks=[];
   public error:string="";
   public vb:string="none";
+  private sub:Subscription
   constructor(private store:Store) { }
   ngOnInit() {
-    this.store.select(TodoState.getTasks).subscribe((tsks)=>{
+    this.sub= this.store.select(TodoState.getTasks).subscribe((tsks)=>{
       this.tasks=tsks;
     })
+    
   }  
   tskComplete(id){
     this.store.dispatch(new CompleteTask(id));
@@ -43,5 +47,8 @@ export class TaskListComponent implements OnInit {
       this.vb="block";
       this.error="Please archivate completed tasks!";
     }
+  }
+  ngOnDestroy(){
+    this.sub.unsubscribe()
   }
 }

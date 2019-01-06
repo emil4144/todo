@@ -2,10 +2,10 @@
     <h1 class="tasklist-header">What needs to be done?</h1>
     <ul class="tasklist-list">
         <li *ngFor="let task of tasks" NgHover="show">
-            <input type="checkbox"  class="check-done" [checked]="task.completed" (change)="tskComplete(task.id)">
-            <span [class.completed]="task.completed">{{task.tsk}}</span>
-            <span class="archive-btn" (click)="archiveTask(task.id, task.completed)">A</span>
-            <span class="delete-btn"  (click)="deleteTask(task.id, task.completed)">X</span>
+            <input type="checkbox" [id]="task.id"  class="check-done" [checked]="task.completed" (change)="tskComplete(task.id)">
+            <label [for]="task.id"><span [class.completed]="task.completed">{{task.tsk}}</span></label>
+            <span class="archive-btn" title="Archivate"(click)="archiveTask(task.id, task.completed)">A</span>
+            <span class="delete-btn" title="Delete"  (click)="deleteTask(task.id, task.completed)">X</span>
         </li>
         <li *ngIf="!tasks.length">No tasks yet</li>
     </ul>

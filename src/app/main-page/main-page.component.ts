@@ -9,14 +9,13 @@ import{TodoState}from'../state/todo.state';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit { 
-  private tasks=[];
-  private task="";  
-  private id;
+  public tasks=[];
+  public task:string="";
   constructor(private store:Store) { }  
   ngOnInit() {
     this.store.select(state=>state.todo.items).subscribe((tsks)=>{
       this.tasks=tsks;          
-    })    
+    })      
   }
   CreateTask(){    
     if(this.task==""|| this.task==null){}

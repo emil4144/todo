@@ -2,6 +2,6 @@
     <h1 class="archive-header">Archived tasks</h1>
     <ul class="archive-list">
         <li *ngFor="let task of tasks" >{{task.tsk}}</li>
-        <li *ngIf="tasks==''" >No tasks yet</li>
+        <li *ngIf="!tasks.length" >No tasks yet</li>
     </ul>
 </div>

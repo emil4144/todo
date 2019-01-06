@@ -8,7 +8,7 @@
     <h1>Task list</h1>
     <ul class="tasks">
       <li *ngFor="let task of tasks">{{task.tsk}}</li>      
-      <li *ngIf="tasks==''" >No tasks yet</li>
+      <li *ngIf="!tasks.length" >No tasks yet</li>
     </ul>
   </div>
 </div>

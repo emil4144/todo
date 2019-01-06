@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import{Select,Store} from '@ngxs/store';
-import {TodoState}from '../state/todo.state'
-import { Observable} from 'rxjs';
+import {TodoState}from '../state/todo.state';
 
 
 @Component({
@@ -10,7 +9,7 @@ import { Observable} from 'rxjs';
   styleUrls: ['./actve.component.css']
 })
 export class ActveComponent implements OnInit {
-  private tasks=[]; 
+  public tasks=[]; 
   
   constructor(private store:Store,) { }
  

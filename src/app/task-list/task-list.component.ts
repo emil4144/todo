@@ -9,12 +9,10 @@ import { CompleteTask, UnCompleteTask,DeleteTask,ArchiveTask } from '../state/to
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  private show=false;
-  private tasks=[];
-  private error="";
-  private vb="none";
+  public tasks=[];
+  public error:string="";
+  public vb:string="none";
   constructor(private store:Store) { }
-
   ngOnInit() {
     this.store.select(TodoState.getTasks).subscribe((tsks)=>{
       this.tasks=tsks;

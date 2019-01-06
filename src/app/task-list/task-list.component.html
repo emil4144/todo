@@ -7,7 +7,7 @@
             <span class="archive-btn" (click)="archiveTask(task.id, task.completed)">A</span>
             <span class="delete-btn"  (click)="deleteTask(task.id, task.completed)">X</span>
         </li>
-        <li *ngIf="tasks==''">No tasks yet</li>
+        <li *ngIf="!tasks.length">No tasks yet</li>
     </ul>
     <div class="err-bar" [style.display]="vb">{{error}}</div>
 </div>

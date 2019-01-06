@@ -7,7 +7,7 @@ import {TodoState}from '../state/todo.state';
   styleUrls: ['./completed.component.css']
 })
 export class CompletedComponent implements OnInit {
-  private tasks=[];
+  public tasks=[];
   constructor(private store:Store) { }
  
 

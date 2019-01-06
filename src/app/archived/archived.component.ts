@@ -7,7 +7,7 @@ import {TodoState}from '../state/todo.state';
   styleUrls: ['./archived.component.css']
 })
 export class ArchivedComponent implements OnInit {
-  private tasks=[];
+  public tasks=[];
   
   constructor(private store:Store) { }
  
